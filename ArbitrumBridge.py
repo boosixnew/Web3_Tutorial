@@ -82,3 +82,26 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from python_coreml_stable_diffusion._version import __version__
+    readme = f.read()
+setup(
+    name='python_coreml_stable_diffusion',
+    description="Run Stable Diffusion on Apple Silicon with Core ML (Python and Swift)",
+    long_description=readme,
+    long_description_content_type='text/markdown',
+    author='Apple Inc.',
+    install_requires=[
+        "torch",
+        "huggingface-hub",
+        "numpy<1.24",
+        "invisible-watermark",
+        "safetensors",
+    ],
+    classifiers=[
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3.7",
+        "Topic :: Artificial Intelligence",
+        "Topic :: Scientific/Engineering",
+    ],
+)
